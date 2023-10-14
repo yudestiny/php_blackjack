@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor 一般ユーザー as u
+package ツーカードポーカー {
+   usecase "現時点の得点を把握してさらにカードを引くか選択できる" as UC1
+   usecase "複数人でプレイすることができる" as UC2
+   usecase "様々なルールに対応できる" as UC3
+}
+u-->UC1
+u-->UC2
+u-->UC3
+@enduml

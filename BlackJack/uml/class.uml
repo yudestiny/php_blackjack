@@ -1,0 +1,40 @@
+@startuml
+class BJGame{
+ -名前
+displayGame()
+ joinPlayer()
+
+}
+class Player{
+  $name
+  getCards ()
+  getAdditionalCard()
+  getpresentscore()
+}
+class Dealer{
+  getCards ()
+  getPokerWinner($hands1, $hands2)
+}
+class Judge{
+ judgePlayer ()
+  judgeDealer()
+  getPokerWinner($hands1, $hands2)
+}
+interface BJplayer{
+名前　
+getCards ()
+  getAdditionalCard()
+  getpresentscore()
+}
+class Card{
+CARD_RANK
+getRanks()
+pickRandomCard()
+}
+BJGame-->BJplayer
+BJGame-->Dealer
+BJGame-->Card
+BJGame-->Judge
+BJplayer<|--Player
+@enduml
+
